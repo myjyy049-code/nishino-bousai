@@ -388,21 +388,21 @@
 
   <div class="info-card">
     <h3>&#x260E; 緊急連絡先</h3>
-    <a class="tel-link" href="tel:110">
+    <a class="tel-link" href="tel:110" onclick="return confirmCall('110', '警察')">
       <span class="tel-icon">&#x1F46E;</span>
       <div>
         <div class="tel-name">警察（事件・事故）</div>
         <div class="tel-num">110</div>
       </div>
     </a>
-    <a class="tel-link" href="tel:119">
+    <a class="tel-link" href="tel:119" onclick="return confirmCall('119', '消防・救急')">
       <span class="tel-icon">&#x1F692;</span>
       <div>
         <div class="tel-name">消防・救急</div>
         <div class="tel-num">119</div>
       </div>
     </a>
-    <a class="tel-link" href="tel:171">
+    <a class="tel-link" href="tel:171" onclick="return confirmCall('171', '災害用伝言ダイヤル')">
       <span class="tel-icon">&#x1F4DE;</span>
       <div>
         <div class="tel-name">災害用伝言ダイヤル</div>
@@ -432,7 +432,7 @@
 
   <div class="info-card">
     <h3>&#x1F4F1; 役立つリンク</h3>
-    <a class="tel-link" href="https://www.city.sagamihara.kanagawa.jp/bosai/" target="_blank">
+    <a class="tel-link" href="https://www.city.sagamihara.kanagawa.jp/kurashi/bosai/index.html" target="_blank">
       <span class="tel-icon">&#x1F310;</span>
       <div>
         <div class="tel-name">相模原市 防災情報</div>
@@ -455,6 +455,10 @@
 </div>
 
 <script>
+function confirmCall(num, name) {
+  return confirm(name + '（' + num + '）に電話をかけますか？\n\n緊急の場合のみご利用ください。');
+}
+
 const spots = [
   {
     name: "青野原グラウンド",
