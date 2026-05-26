@@ -315,6 +315,9 @@
   <button class="tab" onclick="switchTab('info', this)">
     <span class="tab-icon">&#x2139;</span>防災情報
   </button>
+  <button class="tab" onclick="openPortal()">
+    <span class="tab-icon">🌐</span>防災ポータル
+  </button>
 </div>
 
 <!-- マップ画面 -->
@@ -560,6 +563,10 @@ spots.forEach((spot, i) => {
 
   markers.push(marker);
 });
+
+function openPortal() {
+  window.open('https://sagamihara.portal.dmacs.jp/', '_blank');
+}
 
 function switchTab(tab, el) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
